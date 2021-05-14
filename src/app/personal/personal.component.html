@@ -1,0 +1,27 @@
+<div class="container">
+  <form [formGroup]="personal">
+    <mat-form-field appearance="outline" class="form">
+      <mat-label>First Name</mat-label>
+      <input matInput placeholder="First Name" formControlName="first" required>
+      <mat-error *ngIf="personal.controls['first'].invalid">{{getfirst()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form">
+      <mat-label>Last Name</mat-label>
+      <input matInput placeholder="Last Name" formControlName="last" required>
+      <mat-error *ngIf="personal.controls['last'].invalid">{{getlast()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" formControlName="email" required>
+      <mat-error *ngIf="personal.controls['email'].invalid">{{getemail()}}</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="form">
+      <mat-label>Phone Number</mat-label>
+      <input matInput placeholder="phone" formControlName="phone" required>
+      <mat-error *ngIf="personal.controls['phone'].invalid">{{getphone()}}</mat-error>
+    </mat-form-field>
+  </form>
+</div>

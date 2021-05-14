@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button class="example-icon" aria-label="example icon-button with share icon">
+    <mat-icon><a [routerLink]="['/']" [ngStyle]="{'color':'white','text-decoration':'none'}">home</a></mat-icon>
+  </button>
+
+  <span>PC</span>
+
+  <a routerLink="/system">
+    <button mat-flat-button color="primary">Build</button>
+  </a>
+
+</mat-toolbar>
+
+<router-outlet></router-outlet>

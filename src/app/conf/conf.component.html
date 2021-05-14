@@ -1,0 +1,51 @@
+<div class="container">
+  <form [formGroup]="conf">
+    <div formArrayName="pc">
+      <div *ngFor="let sample of pc.controls;let i=index">
+        <div [formGroupName]="i">
+          <div class="buttongroup">
+            <button (click)="add()" mat-stroked-button color="primary" class="button">Add</button>
+            <button (click)="delete(i)" mat-stroked-button color="primary" class="button">Delete</button>
+          </div>
+          <mat-form-field appearance="outline" class="example">
+            <mat-label>Choose the System</mat-label>
+            <mat-select formControlName="name">
+              <mat-option *ngFor="let name1 of name" [value]="name1.value">
+                <i class="fas fa-{{icon[name1.viewValue]}}"></i> {{name1.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="example">
+            <mat-label>Processor</mat-label>
+            <mat-select formControlName="version">
+              <mat-option *ngFor="let version1 of version" [value]="version1.value">
+                <i class="fab fa-{{windows[0]}}"></i> {{version1.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="example">
+            <mat-label>Memory</mat-label>
+            <mat-select formControlName="number">
+              <mat-option *ngFor="let memory1 of memory" [value]="memory1.value">
+               <i class="fas fa-{{micon[0]}}"></i> {{memory1.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="exmaple">
+            <mat-label>Storage</mat-label>
+            <mat-select formControlName="storage">
+              <mat-option *ngFor="let storage1 of storage" [value]="storage1.value">
+                <i class="far fa-{{si[0]}}"></i> {{storage1.value}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>
