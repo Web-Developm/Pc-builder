@@ -18,13 +18,15 @@ import {MatSelectModule} from '@angular/material/select';
 import { ConfComponent } from './conf/conf.component';
 import { SystemComponent } from './system/system.component';
 import {MatCardModule} from '@angular/material/card';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonalComponent,
     ConfComponent,
-    SystemComponent
+    SystemComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,
